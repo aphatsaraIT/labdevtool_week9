@@ -42,7 +42,7 @@ export default function Home({ host }) {
   }
   return (
     <div className={styles.container}>
-      <h1 style={{}}>LAB Week 9</h1>
+      <h1 style={{padding : "2%"}}>LAB Week 9</h1>
       <div style={{ display: "column", justifyContent: "center", alignItems: "center" }}>
         <div style={{
           display: "column"
