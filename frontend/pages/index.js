@@ -73,10 +73,7 @@ export default function Home({ host }) {
           <div>Student ID: :</div>
           <input type={"text"} onChange={(e) => setNum(e.target.value)} placeholder={"Enter Student ID"} />
         </div>
-        <button style={{
-
-          cursor: pointer, padding: 2, backgroundColor: "cyan"
-        }} onClick={() => submitData()}>Submit</button>
+        <button onClick={() => submitData()}>Submit</button>
       </div>
       {image && (
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
