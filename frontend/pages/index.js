@@ -49,43 +49,48 @@ export default function Home({ host }) {
   };
   return (
     <div className={styles.container}>
-      <h1 style={{ textAlign: "center", color: "pink" }}>
-        Welcome Software Tools
-      </h1>
-      <div style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <div style={{ flexDirection: "row", top: "15%", justifyContent: "center"}}>
-          <input
-            style={{ padding: "5px", borderRadius: "5px", margin: 4 }}
-            type={"text"}
-            onChangeText={onChangeNameHandler}
-            placeholder={"name"}
-          />
-          <input
-            style={{ padding: "5px", borderRadius: "5px", margin: 4 }}
-            type={"text"}
-            onChangeText={onChangeSurnameHandler}
-            placeholder={"surname"}
-          />
-          <input
-            style={{ padding: "5px", borderRadius: "5px", margin: 4 }}
-            type={"text"}
-            onChange={(e) => setNumbers(e.target.value)}
-            placeholder={"numbers"}
-          />
-        </div>
+      <div className="row mt-4">
+      <div className="col-12 col-md-6 offset-md-3">
+      <h2 className="my-4 text-center">Software Devtool</h2>
+        <div style={{ display: "flex", flexDirection: "row" }}>
+              <div className="form-group">
+                <label for="name">Your Name</label>
+                <input
+                   onChange={(e) => setName(e.target.value)}
+                  type="text"
+                  className="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div className="form-group" style={{ marginLeft: 10 }}>
+                <label for="surname">Your Surname</label>
+                <input
+                  onChange={(e) => setSurname(e.target.value)}
+                  type="text"
+                  className="form-control"
+                  id="surname"
+                  placeholder="Enter your surname"
+                />
+              </div>
+              <div className="form-group" style={{ marginLeft: 10 }}>
+                <label for="number">Your Susent ID</label>
+                <input
+                 onChange={(e) => setNumbers(e.target.value)}
+                  type="text"
+                  className="form-control"
+                  id="number"
+                  placeholder="Enter your student id"
+                />
+              </div>
+            </div>
+     
         <div style={{ display: "flex", flexDirection: "row", top: "20%", justifyContent: "center" }}>
-          <input
-            style={{ padding: "5px", borderRadius: "5px" }}
-            id="input"
-            type="file"
-            onChange={() => handleChange()}
-          />
-          <button
-            className="btn btn-secondary"
-            style={{ padding: "5px", borderRadius: "5px", backgroundColor: 'pink', color: 'white' }}
-            onClick={() => sendImage()}
-          >
-            Send
+        <div className="form-group">
+              <input id="input" type="file" onChange={() => handleChange()} />
+             </div>
+          <button type="submit" className="btn btn-primary"  onClick={() => sendImage()}>
+              Submit
           </button>
         </div>
       </div>
@@ -125,6 +130,7 @@ export default function Home({ host }) {
           </ul>
         </div>
       )}
+      </div>
     </div>
   );
 }
